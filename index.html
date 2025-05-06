@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regresión Lineal con TensorFlow.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Modelo de Regresión Lineal</h1>
+    
+    <div class="container">
+        <p>Fórmula original: y = 2x + 6</p>
+        <label for="inputX">Ingrese valores para x (separados por comas):</label>
+        <textarea id="inputX" rows="2" placeholder="Ejemplo: 1, 2, 3, 4"></textarea>
+        <button onclick="predecirValor()">Predecir valores</button>
+    </div>
+
+    <div class="container">
+        <div id="estadoEntrenamiento">Espere un momento, se está entrenando el modelo...</div>
+        <div id="resultado" class="results"></div>
+    </div>
+
+    <div class="container">
+        <h3>Pérdida durante el entrenamiento</h3>
+        <div id="graficoPerdida" class="chart-container"></div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
